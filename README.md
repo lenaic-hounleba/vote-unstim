@@ -12,9 +12,7 @@ Plateforme web complète permettant aux utilisateurs de voter pour leur candidat
 
 ## 📸 Aperçu de l'application
 
-*(Captures d'écran à venir)*
-
-> 📁 Les screenshots seront disponibles dans `/docs/screenshots/`
+![Accueil](https://raw.githubusercontent.com/lenaic-hounleba/vote-unstim/main/public/imgs/NFS.png)
 
 ---
 
