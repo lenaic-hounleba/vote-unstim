@@ -1,3 +1,7 @@
+![Laravel](https://img.shields.io/badge/Laravel-10-red)
+![PHP](https://img.shields.io/badge/PHP-8-blue)
+![MySQL](https://img.shields.io/badge/MySQL-database-orange)
+
 # 🗳️ Plateforme de vote en ligne - Nuit de la Femme Scientifique
 
 > Application web de vote en ligne développée en binôme pour l'**Université Nationale des Sciences, Technologies, Ingénierie et Mathématiques (UNSTIM)** au Bénin, dans le cadre de l'événement **"La Nuit de la Femme Scientifique"** - élection de la meilleure femme scientifique de l'université (2023-2024).
