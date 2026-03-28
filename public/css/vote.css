@@ -1,0 +1,108 @@
+body {
+    background-color: #fff;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0;
+  }
+  #voteForm {
+    width: 65%;
+    background-color: black;
+    padding:40px 55px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #43430c;
+    text-align: center;
+  }
+  #payerButton {
+    width: 35%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: auto;
+  }
+  #voteForm input {
+    background-color: transparent;
+    width: 50px;
+    border-radius: 10px;   
+    color: white;   
+    border: 1px solid white;
+    padding-left: 10px;
+  }
+  #embed {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    display: none;
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: center;
+  }
+  @media (max-width: 900px) {
+    body {
+        padding: 0;
+        background-color: black;
+    }
+    .nominé_text{
+      color: #ffc107;
+      justify-content: center;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 25px !important;
+    }
+    #voteForm {
+      width: 100%;
+      max-width: 500px;
+      padding: 50px 20px 50px 20px;
+      box-shadow: none;
+        background-color: black;
+        text-align: center;
+    }
+    #voteForm input {
+        background-color: transparent;
+        width: 50px;
+        border-radius: 10px;   
+        color: white;   
+        border: 1px solid white;
+        padding-left: 10px;
+    }
+    #payerButton {
+      width: 50%;
+      font-size: 20px;
+      font-weight: 500;
+      margin: auto;
+    }
+  }
+  .icon {
+    margin-right: 10px;
+  }
+  button{
+    font-size: 40px;
+  }
+  .nominé_text{
+    color: #ffc107;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  /* .evidence {
+    font-weight: bolder;
+  } */
+  .error-message {
+    color: #ff0000;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.alert.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
