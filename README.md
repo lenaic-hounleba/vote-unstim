@@ -1,4 +1,4 @@
-# 🗳️ Online Voting Platform - Night of the Scientific Woman
+# 🗳️ Online Voting Platform - La Nuit de la Femme Scientifique
 
 ![Online Voting](https://img.shields.io/badge/System-Online%20Voting-green)
 ![Laravel](https://img.shields.io/badge/Laravel-Framework-red)
