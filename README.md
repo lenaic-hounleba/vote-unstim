@@ -1,4 +1,4 @@
-# 🗳️ Plateforme de vote en ligne - Nuit de la Femme Scientifique
+# 🗳️ Online Voting Platform - Night of the Scientific Woman
 
 ![Online Voting](https://img.shields.io/badge/System-Online%20Voting-green)
 ![Laravel](https://img.shields.io/badge/Laravel-Framework-red)
@@ -8,164 +8,164 @@
 ![MVC](https://img.shields.io/badge/Architecture-MVC-purple)
 ![Secure](https://img.shields.io/badge/Security-CSRF%20Protected-lightgrey)
 
-> Application web de vote en ligne développée en binôme pour l'**Université Nationale des Sciences, Technologies, Ingénierie et Mathématiques (UNSTIM)** au Bénin, dans le cadre de l'événement **"La Nuit de la Femme Scientifique"** - élection de la meilleure femme scientifique de l'université (2023-2024).
+> Online voting web application developed as a duo for the **National University of Sciences, Technologies, Engineering and Mathematics (UNSTIM)** in Benin, as part of the event **"La Nuit de la Femme Scientifique"** - election of the best female scientist of the university (2023-2024).
 
 ---
 
 ## 📌 Description
 
-Plateforme web complète permettant aux utilisateurs de voter pour leur candidate préférée lors de l'élection organisée par l'UNSTIM. Le système intègre une gestion des comptes utilisateurs, des sessions de vote sécurisées, un comptage automatique des résultats et un paiement en ligne via **FedaPay**.
+Complete web platform allowing users to vote for their favorite candidate during the election organized by UNSTIM. The system includes user account management, secure voting sessions, automatic result counting and online payment via **FedaPay**.
 
 ---
 
-## 📸 Aperçu de l'application
+## 📸 Application Preview
 
-![Accueil](https://raw.githubusercontent.com/lenaic-hounleba/vote-unstim/main/public/imgs/NFS.png)
+![Home](https://raw.githubusercontent.com/lenaic-hounleba/vote-unstim/main/public/imgs/NFS.png)
 
 ---
 
-## ⚙️ Stack technique
+## ⚙️ Tech Stack
 
-- **Backend** : PHP · Laravel (framework MVC)
-- **Base de données** : MySQL · Eloquent ORM
+- **Backend** : PHP · Laravel (MVC framework)
+- **Database** : MySQL · Eloquent ORM
 - **Frontend** : HTML5 · CSS3 · Bootstrap · JavaScript
-- **Paiement** : FedaPay (intégration API)
-- **Authentification** : Laravel Sanctum
+- **Payment** : FedaPay (API integration)
+- **Authentication** : Laravel Sanctum
 - **Tests** : PHPUnit
-- **Outils** : Composer · Artisan CLI · Vite
+- **Tools** : Composer · Artisan CLI · Vite
 
 ---
 
-## 🧠 Fonctionnalités principales
+## 🧠 Main Features
 
-- 🗳️ Vote pour une candidate (conditionné au paiement)
-- 💳 Paiement en ligne via **FedaPay** pour valider le vote
-- 📊 Comptage automatique et affichage des résultats en temps réel
-- 🛡️ Interface d'administration pour gérer les candidates et les votes
-- 🔒 Intégrité des données garantie (un vote par utilisateur, avec possibilité de faire plusieurs votes en une fois, le montant se multiplie)
+- 🗳️ Vote for a candidate (conditioned on payment)
+- 💳 Online payment via **FedaPay** to validate the vote
+- 📊 Automatic counting and real-time display of results
+- 🛡️ Administration interface to manage candidates and votes
+- 🔒 Data integrity guaranteed (one vote per user, with the possibility of multiple votes at once, the amount multiplies)
 
 ---
 
-## 🏗️ Architecture du projet
+## 🏗️ Project Architecture
 
 ```
 vote-unstim/
 ├── app/
 │   ├── Http/
-│   │   ├── Controllers/       # logique des routes (vote, admin, paiement)
-│   │   └── Middleware/        # authentification, accès admin
+│   │   ├── Controllers/       # route logic (vote, admin, payment)
+│   │   └── Middleware/        # authentication, admin access
 │   └── Models/
-│       ├── Candidate.php      # modèle candidat
-│       ├── User.php           # modèle utilisateur
-│       └── Vote.php           # modèle vote
+│       ├── Candidate.php      # candidate model
+│       ├── User.php           # user model
+│       └── Vote.php           # vote model
 ├── database/
-│   ├── migrations/            # structure des tables (users, candidates, votes)
+│   ├── migrations/            # table structure (users, candidates, votes)
 │   └── seeders/
 ├── resources/
-│   └── views/                 # templates Blade
-│       ├── index.blade.php    # page d'accueil / liste des candidates
-│       ├── vote.blade.php     # page de vote
-│       └── admin.blade.php    # interface admin
+│   └── views/                 # Blade templates
+│       ├── index.blade.php    # home page / candidates list
+│       ├── vote.blade.php     # voting page
+│       └── admin.blade.php    # admin interface
 ├── routes/
-│   └── web.php                # définition des routes
+│   └── web.php                # route definitions
 ├── config/
-│   └── fedapay.php            # configuration paiement FedaPay
+│   └── fedapay.php            # FedaPay payment configuration
 └── public/
-    ├── css/                   # styles personnalisés
-    └── imgs/                  # photos des candidates
+    ├── css/                   # custom styles
+    └── imgs/                  # candidates photos
 ```
 
 ---
 
-## 🔄 Flux de vote
+## 🔄 Voting Flow
 
 ```
-Utilisateur arrive sur le site
+User arrives on the site
         ↓
-Consulte les candidates
+Browses the candidates
         ↓
-Sélectionne une candidate
+Selects a candidate
         ↓
-Paiement via FedaPay
+Payment via FedaPay
         ↓
-Vote enregistré en base
+Vote recorded in database
         ↓
-Résultats mis à jour en temps réel
+Results updated in real time
 ```
 
 ---
 
-## 🚀 Installation locale
+## 🚀 Local Installation
 
-### Prérequis
+### Prerequisites
 - PHP 8+ · Composer · MySQL · Node.js
 
-### Étapes
+### Steps
 
 ```bash
-# 1. Cloner le dépôt
+# 1. Clone the repository
 git clone https://github.com/lenaic-hounleba/vote-unstim.git
 cd vote-unstim
 
-# 2. Installer les dépendances
+# 2. Install dependencies
 composer install
 
-# 3. Configurer l'environnement
+# 3. Configure the environment
 cp .env.example .env
-# → Renseigner DB_*, FEDAPAY_SECRET_KEY, APP_URL
+# → Fill in DB_*, FEDAPAY_SECRET_KEY, APP_URL
 
-# 4. Générer la clé applicative
+# 4. Generate the application key
 php artisan key:generate
 
-# 5. Migrer la base de données
+# 5. Migrate the database
 php artisan migrate
 
-# 6. Lancer le serveur
+# 6. Start the server
 php artisan serve
 ```
 
 ---
 
-## 🔐 Sécurité & intégrité
+## 🔐 Security & Integrity
 
-- Authentification via **Laravel Sanctum**
-- Vote conditionné au paiement FedaPay (prévention des fraudes)
-- Protection CSRF native Laravel
-- Gestion des rôles : utilisateur / administrateur via **middlewares**
-
----
-
-## ⚠️ Limites
-
-> Projet réalisé dans un contexte événementiel avec des délais contraints.
-
-- Application non maintenue activement après l'événement
+- Authentication via **Laravel Sanctum**
+- Vote conditioned on FedaPay payment (fraud prevention)
+- Native Laravel CSRF protection
+- Role management: user / administrator via **middlewares**
 
 ---
 
-## 👥 Équipe
+## ⚠️ Limits
 
-Projet réalisé en **binôme** - commande client pour l'UNSTIM (Bénin), dans le cadre de la **"Nuit de la Femme Scientifique" 2023-2024**.
+> Project carried out in an event context with tight deadlines.
 
----
-
-## 📚 Compétences mobilisées
-
-- Développement **Full Stack** avec Laravel (MVC, routes, middlewares, Eloquent ORM)
-- Intégration d'un système de **paiement en ligne** (FedaPay)
-- Gestion de **l'intégrité des données** dans un système de vote
-- Déploiement et configuration d'une application Laravel en production
+- Application not actively maintained after the event
 
 ---
 
-## 👨‍💻 Auteur
+## 👥 Team
+
+Project carried out as a **duo** - client order for UNSTIM (Benin), as part of the **"Nuit de la Femme Scientifique" 2023-2024**.
+
+---
+
+## 📚 Skills Demonstrated
+
+- **Full Stack** development with Laravel (MVC, routes, middlewares, Eloquent ORM)
+- Integration of an **online payment** system (FedaPay)
+- Management of **data integrity** in a voting system
+- Deployment and configuration of a Laravel application in production
+
+---
+
+## 👨‍💻 Author
 
 **Lenaïc Love HOUNLEBA**  
-CEO & Développeur Full Stack - [ComeUp](https://comeup.com/fr/@lenaic-1)
+CEO & Full Stack Developer - [ComeUp](https://comeup.com/fr/@lenaic-1)
 
 🔗 GitHub : [github.com/lenaic-hounleba](https://github.com/lenaic-hounleba)  
 📧 lovehounleba@gmail.com
 
 ---
 
-> *Projet réalisé pour l'UNSTIM (Bénin) - événement "La Nuit de la Femme Scientifique", 2023-2024.*
+> *Project carried out for UNSTIM (Benin) - "La Nuit de la Femme Scientifique" event, 2023-2024.*
